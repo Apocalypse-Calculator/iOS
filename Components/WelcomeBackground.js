@@ -5,15 +5,16 @@ import {
   View, 
   Image 
 } from 'react-native';
-import { WelcomeBackground } from './Components/WelcomeBackground'
-import { WelcomeText } from './Components/WelcomeText'
 
-
-export default function App() {
+export default function WelcomeBackground() {
   return (
-    <WelcomeBackground />,
-    <WelcomeText />
-  );
+<View style={styles.container}>
+    <Image
+    style={styles.image}
+    source={require('./Images/main_header.png')}
+    />
+    </View>
+  )
 }
 
 const styles = StyleSheet.create({
@@ -24,4 +25,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 
+  image: {
+    flex: 1,
+    height: 400,
+    width: 400
+  },
 });
