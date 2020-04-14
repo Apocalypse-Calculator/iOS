@@ -6,28 +6,20 @@ import {
   Image 
 } from 'react-native';
 
-export default function WelcomeBackground() {
+export default WelcomeBackground = () => 
+{
   return (
-<View style={styles.container}>
     <Image
-    style={styles.image}
-    source={require('./Images/main_header.png')}
-    />
-    </View>
+    resizeMode='stretch'
+    style={styles.image} 
+     source={require('./Images/main_header.png')}
+     /> 
   )
-}
+};
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 5,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
   image: {
-    flex: 1,
-    height: 400,
+    height: 80,
     width: 400
   },
 });

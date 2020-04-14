@@ -9,8 +9,8 @@ import {
 export default function WelcomeText() {
     return (
   <View style={styles.container}>
-        <Image style={styles.image} source={require('.Images/app_logo.png')}
-        />
+        {/* <Image style={styles.image} source={require('.Images/app_logo.png')}
+        /> */}
         <Text>ReStock</Text>
         <Text>Calculate what you really need</Text> 
       </View>
