@@ -3,17 +3,17 @@ import { StyleSheet, Text, View, Image } from "react-native";
 
 export default WelcomeText = () => {
   return (
-    <>
+    <View style={{backgroundColor: 'red'}}>
       <Image style={styles.image} source={require("./Images/app_logo.png")} />
       <Text>ReStock</Text>
       <Text>Calculate what you really need</Text>
-    </>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-      mainText: {
-      color: 'grey',
+  mainText: {
+  color: 'grey',
   },
 
   subText: {
