@@ -26,6 +26,6 @@ const styles = StyleSheet.create({
   image: {
     width: 400.5,
     height: 80.5,
-    // background: var(--green-blue)
-  }
+    textAlignVertical: 'top'  
+}
 });

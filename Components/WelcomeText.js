@@ -23,8 +23,7 @@ const styles = StyleSheet.create({
   },
 
   image: {
-    flex: 1,
-    height: 400,
-    width: 400,
+    height: 100,
+    width: 100,
   },
 });
