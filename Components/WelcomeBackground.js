@@ -18,8 +18,14 @@ export default WelcomeBackground = () =>
 };
 
 const styles = StyleSheet.create({
+  // image: {
+  //   height: 80,
+  //   width: 40
+  // },
+
   image: {
-    height: 80,
-    width: 400
-  },
+    width: 400.5,
+    height: 80.5,
+    // background: var(--green-blue)
+  }
 });

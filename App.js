@@ -7,7 +7,7 @@ export default App = () => {
   return (
     <View style={styles.container}>
       <WelcomeBackground />
-      {/* <WelcomeText />  */}
+      <WelcomeText />  
     </View>
   );
 };
