@@ -1,15 +1,15 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 import WelcomeBackground from "./Components/WelcomeBackground";
-import WelcomeText from "./Components/WelcomeText";
+import WelcomeHeader from "./Components/WelcomeHeader";
 import WelcomeSignIn from "./Components/WelcomeSignIn";
 
 export default App = () => {
   return (
     <View style={styles.container}>
       <WelcomeBackground />
-      <View style={{alignItems: 'center', backgroundColor: 'blue'}}>
-        <WelcomeText />
+      <View style={{alignItems: 'center'}}>
+        <WelcomeHeader />
         <WelcomeSignIn />
       </View>
     </View>
