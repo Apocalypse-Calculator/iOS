@@ -4,6 +4,7 @@ import WelcomeBackground from "./Components/WelcomeBackground";
 import WelcomeHeader from "./Components/WelcomeHeader";
 import WelcomeSignIn from "./Components/WelcomeSignIn";
 import WelcomeSignUp from "./Components/WelcomeSignUp"
+import WelcomeLoginButton from "./Components/WelcomeLoginButton"
 
 export default App = () => {
   return (
@@ -13,6 +14,7 @@ export default App = () => {
         <WelcomeHeader />
         <WelcomeSignIn />
         <WelcomeSignUp />
+        <WelcomeLoginButton />
       </View>
     </View>
   );

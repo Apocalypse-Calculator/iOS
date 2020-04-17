@@ -1,64 +1,78 @@
 import React from "react";
-import { StyleSheet, View, Image, Text, TextInput, TouchableOpacity } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Text,
+  TouchableOpacity,
+} from "react-native";
 import { theme } from "../styles/theme";
 
 export default WelcomeSignUp = () => {
-    return (
-      <View style={styles.center}>
-        <TouchableOpacity
-        style={[styles.signUpBase, styles.emailSignUp]}>
-        <Text style={[styles.signUpText, styles.emailText]}>Sign up with email</Text>
+  return (
+    <View style={styles.center}>
+      <TouchableOpacity style={[styles.signUpBase, styles.emailSignUp]}>
+        <Text style={[styles.signUpText, styles.emailText]}>
+          Sign up with email
+        </Text>
         {/* onPress={() => navigate('HomeScreen')} */}
-        </TouchableOpacity>
-        <TouchableOpacity
-        style={[styles.signUpBase, styles.facebookSignUp]}>
-        <Text style={[styles.signUpText, styles.facebookText]}>Sign up with Facebook</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={[styles.signUpBase, styles.facebookSignUp]}>
+        <Text style={[styles.signUpText, styles.facebookText]}>
+          Sign up with Facebook
+        </Text>
         {/* onPress={() => navigate('HomeScreen')} */}
-        </TouchableOpacity>
+      </TouchableOpacity>
     </View>
-    );
-}
+  );
+};
 
 const styles = StyleSheet.create({
-    signUpBase: {
-        width: 220,
-        height: 44,
-        borderRadius: 44,
-        textAlign: 'center',
-        shadowColor: "#000",
-        shadowOffset: {
-          width: 0,
-          height: 3,
-        },
-        shadowOpacity: 0.27,
-        shadowRadius: 4.65,
-        elevation: 6,
+  signUpBase: {
+    width: 220,
+    height: 44,
+    borderRadius: 44,
+    textAlign: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 3,
     },
+    shadowOpacity: 0.27,
+    shadowRadius: 4.65,
+    elevation: 6,
+  },
 
-    emailSignUp: {
-        backgroundColor: theme.colors.green,
-        
-      },
+  emailSignUp: {
+    backgroundColor: theme.colors.green,
+    paddingTop: 10,
+    marginTop: 24,
+  },
 
-      facebookSignUp: {
-        backgroundColor: '#fff',
-      },
-    
-      signUpText: {
-        textAlign: 'center',
-        fontWeight: 'bold',
-      },
+  facebookSignUp: {
+    backgroundColor: "#fff",
+    borderStyle: "solid",
+    borderColor: "blue",
+    borderWidth: 1,
+    paddingTop: 12,
+    marginTop: 12,
+  },
 
-      emailText: {
-        color: '#fff',
-      },
+  signUpText: {
+    textAlign: "center",
+    fontWeight: "bold",
+  },
 
-      facebookText: {
-        color: theme.colors.blue,
+  emailText: {
+    color: "#fff",
+    fontSize: 18,
+  },
 
-      },
-    
-      center: {
-        alignItems: 'center',
-      }
-    });
+  facebookText: {
+    color: theme.colors.blue,
+    fontSize: 14,
+  },
+
+  center: {
+    alignItems: "center",
+  },
+});

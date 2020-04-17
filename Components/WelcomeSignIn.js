@@ -1,31 +1,30 @@
 import React, { Component, useState } from "react";
-import { StyleSheet, View, Image, Text, TextInput, TouchableOpacity } from "react-native";
+import {
+  StyleSheet,
+  View,
+  TextInput,
+} from "react-native";
 import { theme } from "../styles/theme";
 
 export default WelcomeSignIn = () => {
-  const [text, setText] = useState("");
+  const [usernameText, setUsernameText] = useState("");
+  const [passwordText, setPasswordText] = useState("");
   return (
     <View>
       <TextInput
         style={styles.textBox}
         placeholder="Username"
-        onChangeText={(text) => setText(text)}
-        defaultValue={text}
+        onChangeText={(usernameText) => setUsernameText(usernameText)}
+        defaultValue={usernameText}
       />
-    
+
       <TextInput
+        secureTextEntry={true}
         style={styles.textBox}
         placeholder="Password"
-        onChangeText={(text) => setText(text)}
-        defaultValue={text}
+        onChangeText={(passwordText) => setPasswordText(passwordText)}
+        defaultValue={passwordText}
       />
-      <View style={styles.center}>
-      <TouchableOpacity
-      style={styles.loginScreenButton}>
-      <Text style={styles.loginText}>Login</Text>
-      {/* onPress={() => navigate('HomeScreen')} */}
-      </TouchableOpacity>
-      </View>
     </View>
   );
 };
@@ -39,34 +38,10 @@ const styles = StyleSheet.create({
     width: 280,
     borderRadius: 4,
     marginBottom: 12,
-
-  },
-
-  loginScreenButton: {
-    backgroundColor: theme.colors.grey,
-    width: 92,
-    height: 44,
-    borderRadius: 44,
-    textAlign: 'center',
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 3,
-    },
-    shadowOpacity: 0.27,
-    shadowRadius: 4.65,
-    elevation: 6,
-  },
-
-  loginText: {
-    color: 'white',
-    textAlign: 'center',
-    fontWeight: 'bold',
+    paddingLeft: 20,
   },
 
   center: {
-    alignItems: 'center',
-  }
-
-
+    alignItems: "center",
+  },
 });
