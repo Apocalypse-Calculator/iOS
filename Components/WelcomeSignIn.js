@@ -1,11 +1,12 @@
 import React, { Component, useState } from "react";
 import { StyleSheet, View, Image, Text, TextInput } from "react-native";
+import { theme } from "../styles/theme";
 
 
 export default WelcomeSignIn = () => {
   const [text, setText] = useState('');
   return (
-    <View style={{padding: 10}}>
+    <View  style={styles.textBox}>
       <TextInput
         style={{height: 40}}
         placeholder="Username"
@@ -13,7 +14,7 @@ export default WelcomeSignIn = () => {
         defaultValue={text}
       />
       <TextInput
-        style={{height: 40}}
+        style={styles.textBox}
         placeholder="Password"
         onChangeText={text => setText(text)}
         defaultValue={text}
@@ -22,7 +23,18 @@ export default WelcomeSignIn = () => {
   );
 }
 
-// const styles = StyleSheet.create({
+const styles = StyleSheet.create({
+    textBox: {
+      height: 44,
+      borderColor: theme.colors.grey,
+      borderStyle: 'solid',
+      borderWidth: .9,
+      width: 280,
+      borderRadius: .4,
+    },
+
+    // text: {
+    //   marginLeft: 10,
+    // },
     
-    
-//   });
+});
