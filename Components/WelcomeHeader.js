@@ -26,7 +26,6 @@ const styles = StyleSheet.create({
     paddingTop: 12,
     fontSize: 24,
     fontWeight: 'bold',
-    font: 'Quicksand-Regular',
   },
 
   subText: {

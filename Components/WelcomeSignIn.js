@@ -1,21 +1,25 @@
-import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import React, { Component, useState } from "react";
+import { StyleSheet, Text, View, Image, Text, TextInput } from "react-native";
 
 
 export default WelcomeSignIn = () => {
+    const [text, setText] = useState('');
     return (
-        <View>
-        <Image style={styles.image} source={require("./Images/main_field.png")} />
-        <Image style={styles.image} source={require("./Images/main_field.png")} />
+        <View style={{padding: 10}}>
+      <TextInput
+        style={{height: 40}}
+        placeholder="Type here to translate!"
+        onChangeText={text => setText(text)}
+        defaultValue={text}
+      />
+      <Text style={{padding: 10, fontSize: 42}}>
+        {text.split(' ').map((word) => word && '🍕').join(' ')}
+      </Text>
         </View>
     );
 };
 
-const styles = StyleSheet.create({
-    image: {
-        padding: 20,
-        height: 20,
-        width: 50,
-      },
+// const styles = StyleSheet.create({
     
-  });
+    
+//   });
