@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Image } from "react-native";
 import WelcomeBackground from "./Components/WelcomeBackground";
 import WelcomeHeader from "./Components/WelcomeHeader";
 import WelcomeSignIn from "./Components/WelcomeSignIn";
+import WelcomeSignUp from "./Components/WelcomeSignUp"
 
 export default App = () => {
   return (
@@ -11,6 +12,7 @@ export default App = () => {
       <View style={{ alignItems: "center" }}>
         <WelcomeHeader />
         <WelcomeSignIn />
+        <WelcomeSignUp />
       </View>
     </View>
   );
