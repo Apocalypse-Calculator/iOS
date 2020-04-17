@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     letterSpacing: 0.89,
     paddingTop: 5,
+    marginBottom: 24,
 
   },
 
