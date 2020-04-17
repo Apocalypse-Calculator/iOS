@@ -2,8 +2,8 @@
   "devToolsPort": 19002,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 22705,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null
+  "packagerPid": 1828,
+  "expoServerNgrokUrl": "https://ba-jnp.anonymous.ios.exp.direct",
+  "packagerNgrokUrl": "https://packager.ba-jnp.anonymous.ios.exp.direct",
+  "ngrokPid": 1847
 }
