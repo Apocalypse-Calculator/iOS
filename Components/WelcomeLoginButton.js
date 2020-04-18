@@ -1,13 +1,17 @@
 import React from "react";
 import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 import { theme } from "../styles/theme";
+import { useNavigation } from "@react-navigation/native";
 
 export default WelcomeLoginButton = () => {
+  const navigation = useNavigation()
   return (
     <View style={styles.center}>
-      <TouchableOpacity style={styles.loginScreenButton}>
+      <TouchableOpacity
+        style={styles.loginScreenButton}
+        onPress={() => navigation.navigate("Pick")}
+      >
         <Text style={styles.loginText}>Login</Text>
-        {/* onPress={() => navigate('HomeScreen')}  */}
       </TouchableOpacity>
     </View>
   );

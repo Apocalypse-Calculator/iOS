@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   },
 
   facebookText: {
-    color: theme.colors.blue,
+    color: theme.colors.facebookBlue,
     fontSize: 14,
   },
 
