@@ -1,6 +1,6 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import WelcomeBackground from "../Components/WelcomeBackground";
+import SvgComponent from "../Components/WelcomeBackground";
 import WelcomeHeader from "../Components/WelcomeHeader";
 import WelcomeSignIn from "../Components/WelcomeSignIn";
 import WelcomeSignUp from "../Components/WelcomeSignUp"
@@ -9,7 +9,7 @@ import WelcomeLoginButton from "../Components/WelcomeLoginButton"
 function Welcome({navigation}) {
   return (
     <View style={styles.container}>
-      <WelcomeBackground />
+      <SvgComponent />
       <View style={{ alignItems: "center" }}>
         <WelcomeHeader />
         <WelcomeSignIn />

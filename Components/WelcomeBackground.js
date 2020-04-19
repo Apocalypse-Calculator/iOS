@@ -1,20 +1,15 @@
-import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import * as React from "react"
+import Svg, { Path } from "react-native-svg"
 
-export default WelcomeBackground = () => {
+function SvgComponent(props) {
   return (
-    <Image
-    resizeMode='stretch'
-    style={styles.image}
-     source={require('./Images/main_header.png')}
-     />
+    <Svg width={48} height={1} viewBox="0 0 48 1" {...props}>
+      <Path d="M0 0h48v1H0z" fill="#00bd77" fillRule="evenodd" />
+    </Svg>
   );
 };
 
-const styles = StyleSheet.create({
-    image: {
-      width: 400.5,
-      height: 80.5,
-  }
+export default SvgComponent
 
-});
+
+
