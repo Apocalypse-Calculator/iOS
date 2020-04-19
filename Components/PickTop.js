@@ -20,7 +20,11 @@ export default PickTop = () => {
 
   <View style={styles.dottedLine}>
   </View>
+
+
+  <Text style={styles.bottomText}>Pick a category to calculate your needs</Text>
   </View>
+
 
   );
 };
@@ -68,6 +72,14 @@ dottedLine: {
   borderWidth: 1,
   borderRadius: 1,
   marginTop: 32,
+},
+
+bottomText: {
+  color: theme.colors.grey,
+  marginTop: 24.6,
+  fontSize: 14,
+  height: 16,
+  textAlign: 'center',
 }
 
 });

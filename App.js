@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Welcome from './scenes/Welcome.scene';
 import Pick from './scenes/Pick.scene';
+import Request from './scenes/Request.scene';
 
 const Stack = createStackNavigator();
 
@@ -13,6 +14,7 @@ function App() {
       <Stack.Navigator initialRouteName="Welcome">
         <Stack.Screen name="Welcome" component={Welcome} />
         <Stack.Screen name="Pick" component={Pick} />
+        <Stack.Screen name="Request" component={Request} />
       </Stack.Navigator>
     </NavigationContainer>
   );

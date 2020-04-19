@@ -1,17 +1,12 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import PickTop from "../Components/PickTop";
-import PickRequestMoreItems from "../Components/PickRequestMoreItems";
-import Buttons from "../Components/Buttons";
+import RequestForm from "../Components/RequestForm";
 
-
-function Pick({navigation}) {
+function Request({navigation}) {
     return (
       <View style={styles.container}>
         <View style={{ alignItems: "center" }}>
-          <PickTop />
-          <Buttons />
-          <PickRequestMoreItems />
+          <RequestForm />
         </View>
       </View>
     );
@@ -24,4 +19,4 @@ function Pick({navigation}) {
       },
     });
   
-  export default Pick
+  export default Request
