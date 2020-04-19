@@ -1,9 +1,9 @@
 {
-  "devToolsPort": 19004,
+  "devToolsPort": 19006,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 62575,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null
+  "packagerPid": 74651,
+  "expoServerNgrokUrl": "https://mq-ban.anonymous.ios.exp.direct",
+  "packagerNgrokUrl": "https://packager.mq-ban.anonymous.ios.exp.direct",
+  "ngrokPid": 74669
 }
