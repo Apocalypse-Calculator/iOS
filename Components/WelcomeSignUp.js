@@ -10,23 +10,27 @@ import { theme } from "../styles/theme";
 export default WelcomeSignUp = () => {
   return (
     <View style={styles.center}>
+
       <TouchableOpacity style={[styles.signUpBase, styles.emailSignUp]}>
         <Text style={[styles.signUpText, styles.emailText]}>
           Sign up with email
         </Text>
         {/* onPress={() => navigate('HomeScreen')} */}
       </TouchableOpacity>
+
       <TouchableOpacity style={[styles.signUpBase, styles.facebookSignUp]}>
         <Text style={[styles.signUpText, styles.facebookText]}>
           Sign up with Facebook
         </Text>
         {/* onPress={() => navigate('HomeScreen')} */}
       </TouchableOpacity>
+
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+
   signUpBase: {
     width: 220,
     height: 44,

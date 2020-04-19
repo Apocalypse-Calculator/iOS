@@ -5,13 +5,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Welcome from './scenes/Welcome.scene';
 import Pick from './scenes/Pick.scene';
 
-
-// const a = "test"
-
-// function PickScreen() {
-//   return null;
-// }
-
 const Stack = createStackNavigator();
 
 function App() {

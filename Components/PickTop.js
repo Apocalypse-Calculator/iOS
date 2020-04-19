@@ -11,11 +11,15 @@ export default PickTop = () => {
 
     <Text style={[styles.why, styles.margins]}>Why?</Text>
 
-    <Text style={[styles.reasons, styles.margins]}>Reduce unnecessary spending</Text>
+    <Text style={[styles.reasons, styles.margins]}>
+    Reduce unnecessary spending {'\n'} 
+    More inventory for everyone {'\n'}
+    Develop smart buying habits
+    </Text>
 
-    <Text style={[styles.reasons, styles.margins]}>More inventory for everyone</Text>
+    {/* <Text style={[styles.reasons, styles.margins]}>More inventory for everyone</Text> */}
 
-    <Text style={[styles.reasons, styles.margins]}>Develop smart buying habits</Text>
+    {/* <Text style={[styles.reasons, styles.margins]}>Develop smart buying habits</Text> */}
 
   <View style={styles.dottedLine}>
 </View>
