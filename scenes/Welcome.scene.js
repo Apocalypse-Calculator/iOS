@@ -1,30 +1,57 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, Text, Image } from "react-native";
 import SvgComponent from "../Components/WelcomeBackground";
-import WelcomeHeader from "../Components/WelcomeHeader";
 import WelcomeSignIn from "../Components/WelcomeSignIn";
-import WelcomeSignUp from "../Components/WelcomeSignUp"
-import WelcomeLoginButton from "../Components/WelcomeLoginButton"
+import WelcomeSignUp from "../Components/WelcomeSignUp";
+import WelcomeLoginButton from "../Components/WelcomeLoginButton";
+import { theme } from "../styles/theme";
 
-function Welcome({navigation}) {
+function Welcome({ navigation }) {
   return (
     <View style={styles.container}>
       <SvgComponent />
       <View style={{ alignItems: "center" }}>
-        <WelcomeHeader />
+        <Image
+          style={styles.image}
+          source={require("../Components/Images/app_logo.png")}
+        />
+        <Text style={styles.mainText}>ReStock</Text>
+        <Text style={styles.subText}>Calculate what you really need</Text>
         <WelcomeSignIn />
         <WelcomeSignUp />
         <WelcomeLoginButton />
       </View>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: "#fff",
-    },
-  });
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    paddingTop: 104,
+  },
 
-export default Welcome
+  mainText: {
+    color: theme.colors.green,
+    alignItems: "center",
+    paddingTop: 12,
+    fontSize: 24,
+    fontWeight: "bold",
+  },
+
+  subText: {
+    color: theme.colors.grey,
+    fontSize: 16,
+    letterSpacing: 0.89,
+    paddingTop: 5,
+    marginBottom: 24,
+  },
+
+  image: {
+    height: 100,
+    width: 100,
+  },
+});
+
+export default Welcome;
