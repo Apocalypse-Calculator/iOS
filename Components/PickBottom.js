@@ -9,28 +9,29 @@ export default PickTop = () => {
     <Text style={styles.header}>Pick a category to calculate your needs</Text>
 
     <TouchableOpacity style={[styles.buttons, styles.toiletButton]}> 
-        <Text style={styles.buttonText}>
-          Toilet Paper
-        </Text>
-        {/* onPress={() => navigate('HomeScreen')} */}
+            <Text style={styles.buttonText}>
+             Toilet Paper
+             </Text>
+            {/* onPress={() => navigate('HomeScreen')} */}
       </TouchableOpacity>
 
       <TouchableOpacity style={[styles.buttons, styles.sanitizerButton]}> 
-        <Text style={styles.buttonText}>
-          Hand Sanitizer
-        </Text>
-        {/* onPress={() => navigate('HomeScreen')} */}
+            <Text style={styles.buttonText}>
+            Hand Sanitizer
+            </Text>
+             {/* onPress={() => navigate('HomeScreen')} */}
       </TouchableOpacity>
 
       <TouchableOpacity style={[styles.buttons, styles.waterButton]}> 
-        <Text style={styles.buttonText}>
-          Water Bottles
-        </Text>
-        {/* onPress={() => navigate('HomeScreen')} */}
+            <Text style={styles.buttonText}>
+              Water Bottles
+            </Text>
+            {/* onPress={() => navigate('HomeScreen')} */}
       </TouchableOpacity>
 
-        <Text style={styles.requestItem}>I'd like to request an item to add here</Text>
-
+        <TouchableOpacity>
+            <Text style={styles.requestItem}>I'd like to request an item to add here</Text>
+        </TouchableOpacity>
         </View>
 
         );
@@ -41,6 +42,7 @@ export default PickTop = () => {
             color: theme.colors.grey,
             marginTop: 24.6,
             fontSize: 14,
+            height: 16,
         },
 
         buttons: {
@@ -85,5 +87,6 @@ export default PickTop = () => {
             fontSize: 13, 
             textAlign: "center",
             marginTop: 33,
+            height: 15,
         }
     })

@@ -14,15 +14,12 @@ export default PickTop = () => {
     <Text style={[styles.reasons, styles.margins]}>
     Reduce unnecessary spending {'\n'} 
     More inventory for everyone {'\n'}
-    Develop smart buying habits
+    Develop smart buying habits 
     </Text>
-
-    {/* <Text style={[styles.reasons, styles.margins]}>More inventory for everyone</Text> */}
-
-    {/* <Text style={[styles.reasons, styles.margins]}>Develop smart buying habits</Text> */}
+    
 
   <View style={styles.dottedLine}>
-</View>
+  </View>
   </View>
 
   );
@@ -40,11 +37,13 @@ header: {
   fontWeight: 'bold',
   fontSize: 16,
   marginTop: 24,
+  height: 20,
   },
 
 underHeader: {
   color: theme.colors.charcoal,
   letterSpacing: 1,
+  height: 40,
 },
 
 why: {
@@ -52,12 +51,15 @@ why: {
   fontSize: 14,
   marginTop: 16,
   marginBottom: 5,
+  height: 16,
 },
 
 reasons: {
   color: theme.colors.green,
   fontSize: 14,
   fontWeight: 'bold',
+  lineHeight: 24,
+  height: 72,
 },
 
 dottedLine: {
