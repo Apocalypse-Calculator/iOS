@@ -15,7 +15,7 @@ function Request({ navigation }) {
           </Text>
           <RequestForm />
           <View style={styles.dottedLine}></View>
-          <Text style={styles.text}>Calculate my needs for</Text>
+          <Text style={styles.calculateMyNeedsText}>Calculate my needs for</Text>
 
           <Button color="purple" text="Toilet Paper" />
           <Button
@@ -70,10 +70,11 @@ const styles = StyleSheet.create({
     marginTop: 23,
   },
 
-  text: {
+  calculateMyNeedsText: {
     color: theme.colors.grey,
     marginTop: 10.6,
     fontSize: 14,
+    marginBottom: 22,
   },
 });
 
