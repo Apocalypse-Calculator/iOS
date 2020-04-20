@@ -1,9 +1,9 @@
 import React from "react";
-import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
+import { View, StyleSheet, Text, } from "react-native";
 import PickRequestMoreItems from "../Components/PickRequestMoreItems";
-import Buttons from "../Components/Buttons";
+import Button from "../Components/Button";
 import { theme } from "../styles/theme";
-import { useNavigation } from "@react-navigation/native";
+// import { useNavigation } from "@react-navigation/native";
 
 function Pick({ navigation }) {
   return (
@@ -16,6 +16,7 @@ function Pick({ navigation }) {
         </Text>
 
         <Text style={[styles.why, styles.margins]}>Why?</Text>
+
         <Text style={[styles.reasons, styles.margins]}>
           Reduce unnecessary spending {"\n"}
           More inventory for everyone {"\n"}
@@ -23,12 +24,17 @@ function Pick({ navigation }) {
         </Text>
 
         <View style={styles.dottedLine}></View>
-
+        <View style={styles.center}>
         <Text style={styles.bottomText}>
           Pick a category to calculate your needs
         </Text>
-        <Buttons />
+
+        <Button color='purple' text='Toilet Paper'/>
+        <Button style={{marginVertical: 24}} color='orange' text='Hand Sanitizer'/>
+        <Button color='lightBlue' text='Water Bottles'/>
+
         <PickRequestMoreItems />
+        </View>
       </View>
     </View>
   );
@@ -38,6 +44,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
+  },
+
+  center: {
+    alignItems: 'center',
   },
 
   margins: {
@@ -86,6 +96,7 @@ const styles = StyleSheet.create({
   bottomText: {
     color: theme.colors.grey,
     marginTop: 24.6,
+    marginBottom: 22,
     fontSize: 14,
     height: 16,
     textAlign: "center",

@@ -1,8 +1,7 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
 import RequestForm from "../Components/RequestForm";
-// import RequestSeparator from "../Components/RequestSeparator";
-import Buttons from "../Components/Buttons";
+import Button from "../Components/Button";
 import { theme } from "../styles/theme";
 
 function Request({ navigation }) {
@@ -10,13 +9,23 @@ function Request({ navigation }) {
     <View style={styles.container}>
       <View>
         <Text style={[styles.header, styles.margins]}>REQUEST AN ITEM</Text>
-        <Text style={[styles.underHeader, styles.margins]}>
-          We'll like to know from you what item should we add next
-        </Text>
-        <RequestForm />
-        <View style={styles.dottedLine}></View>
-        <Text style={styles.text}>Calculate my needs for</Text> 
-        <Buttons />
+        <View style={styles.center}>
+          <Text style={[styles.underHeader, styles.margins]}>
+            We'll like to know from you what item should we add next
+          </Text>
+          <RequestForm />
+          <View style={styles.dottedLine}></View>
+          <Text style={styles.text}>Calculate my needs for</Text>
+
+          <Button color="purple" text="Toilet Paper" />
+          <Button
+            style={{ marginVertical: 24 }}
+            color="orange"
+            text="Hand Sanitizer"
+          />
+          <Button color="lightBlue" text="Water Bottles" />
+          
+        </View>
       </View>
     </View>
   );
@@ -26,6 +35,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
+  },
+
+  center: {
+    alignItems: "center",
   },
 
   margins: {

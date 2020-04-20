@@ -9,8 +9,7 @@ export default WelcomeLoginButton = () => {
     <View style={styles.center}>
       <TouchableOpacity
         style={styles.loginScreenButton}
-        onPress={() => navigation.navigate("Pick")}
-      >
+        onPress={() => navigation.navigate("Pick")}>
         <Text style={styles.loginText}>Login</Text>
       </TouchableOpacity>
     </View>

@@ -7,6 +7,7 @@ import WelcomeLoginButton from "../Components/WelcomeLoginButton";
 import { theme } from "../styles/theme";
 
 function Welcome({ navigation }) {
+  console.log(navigation)
   return (
     <View style={styles.container}>
       <SvgComponent />
