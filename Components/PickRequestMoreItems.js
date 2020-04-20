@@ -31,5 +31,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginTop: 33,
     height: 15,
+    color: theme.colors.linkAwayBlue,
   },
 });

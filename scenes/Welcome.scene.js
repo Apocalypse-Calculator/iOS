@@ -16,8 +16,8 @@ function Welcome({ navigation }) {
           style={styles.image}
           source={require("../Components/Images/logo.png")}
         />
-        <Text style={styles.mainText}>ReStock</Text>
-        <Text style={styles.subText}>Calculate what you really need</Text>
+        <Text style={styles.header}>ReStock</Text>
+        <Text style={styles.subHeader}>Calculate what you really need</Text>
         <WelcomeSignIn />
         <WelcomeSignUp />
         <WelcomeLoginButton />
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     paddingTop: 104,
   },
 
-  mainText: {
+  header: {
     color: theme.colors.green,
     alignItems: "center",
     paddingTop: 12,
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
 
-  subText: {
+  subHeader: {
     color: theme.colors.grey,
     fontSize: 16,
     letterSpacing: 0.89,
@@ -52,7 +52,8 @@ const styles = StyleSheet.create({
   image: {
     height: 77,
     width: 97,
-    resizeMode: 'contain', 
+    resizeMode: 'contain',
+    marginBottom: 24, 
   },
 });
 
