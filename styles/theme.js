@@ -8,6 +8,6 @@ export const theme = {
     lightBlue: '#50c1e9',
     charcoal: '#34453f',
     white: '#fff',
-    linkAwayBlue: '#007aff'
+    linkAwayBlue: '#007aff',
   },
 };
