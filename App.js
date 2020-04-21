@@ -5,7 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Welcome from './scenes/Welcome.scene';
 import Pick from './scenes/Pick.scene';
 import Request from './scenes/Request.scene';
-
+import ToiletPaper from './scenes/ToiletPaper.scene';
 const Stack = createStackNavigator();
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
         <Stack.Screen name="Welcome" component={Welcome} />
         <Stack.Screen name="Pick" component={Pick} />
         <Stack.Screen name="Request" component={Request} />
+        <Stack.Screen name="ToiletPaper" component={ToiletPaper} />
       </Stack.Navigator>
     </NavigationContainer>
   );

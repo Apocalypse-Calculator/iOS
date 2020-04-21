@@ -29,8 +29,15 @@ function Pick({ navigation }) {
           Pick a category to calculate your needs
         </Text>
 
-        <Button color='purple' text='Toilet Paper'/>
-        <Button style={{marginVertical: 24}} color='orange' text='Hand Sanitizer'/>
+        <Button color='purple' text='Toilet Paper'
+        onPress={() => navigation.navigate("ToiletPaper")}
+        />
+
+        <Button style={{marginVertical: 24}} 
+        color='orange' text='Hand Sanitizer'
+          
+        />
+
         <Button color='lightBlue' text='Water Bottles'/>
 
         <PickRequestMoreItems />

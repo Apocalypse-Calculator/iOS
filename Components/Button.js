@@ -1,8 +1,8 @@
 import React from "react";
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, TouchableOpacity } from "react-native";
 import { theme } from "../styles/theme";
 
-export default Button = ({ children, style, onPress, color, text, icon }) => {
+export default Button = ({ style, onPress, color, text, icon }) => {
   console.log(theme.colors[color])
   return (
     <TouchableOpacity
@@ -19,24 +19,6 @@ export default Button = ({ children, style, onPress, color, text, icon }) => {
     </TouchableOpacity>
   );
 };
-
-// export default Buttons = () => {
-//   return (
-//     <View>
-//       <Button color='purple' onPress={() => {}}>
-//         Toilet Paper
-//       </Button>
-
-//       <Button color="purple" onPress={() => {}}>
-//         Hand Sanitizer
-//       </Button>
-
-//       <Button color="purple" onPress={() => {}}>
-//         Water Bottles
-//       </Button>
-//     </View>
-//   );
-// };
 
 const styles = StyleSheet.create({
   button: {
