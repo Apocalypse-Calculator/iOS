@@ -29,13 +29,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    paddingTop: 104,
+    // paddingTop: 104,
   },
 
   header: {
     color: theme.colors.green,
     alignItems: "center",
-    paddingTop: 12,
     fontSize: 24,
     fontWeight: "bold",
   },
@@ -53,6 +52,7 @@ const styles = StyleSheet.create({
     width: 97,
     resizeMode: 'contain',
     marginBottom: 24, 
+    marginTop: 37,
   },
 });
 

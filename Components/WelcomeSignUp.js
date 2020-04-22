@@ -1,16 +1,10 @@
 import React from "react";
-import {
-  StyleSheet,
-  View,
-  Text,
-  TouchableOpacity,
-} from "react-native";
+import { StyleSheet, View, Text, TouchableOpacity, Image } from "react-native";
 import { theme } from "../styles/theme";
 
 export default WelcomeSignUp = () => {
   return (
     <View style={styles.center}>
-
       <TouchableOpacity style={[styles.signUpBase, styles.emailSignUp]}>
         <Text style={[styles.signUpText, styles.emailText]}>
           Sign up with email
@@ -20,17 +14,19 @@ export default WelcomeSignUp = () => {
 
       <TouchableOpacity style={[styles.signUpBase, styles.facebookSignUp]}>
         <Text style={[styles.signUpText, styles.facebookText]}>
+          <Image 
+          source={require("./Images/f_logo.png")} 
+          style={styles.facebookImage}
+          />
           Sign up with Facebook
         </Text>
         {/* onPress={() => navigate('HomeScreen')} */}
       </TouchableOpacity>
-
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-
   signUpBase: {
     width: 220,
     height: 44,
@@ -57,8 +53,21 @@ const styles = StyleSheet.create({
     borderStyle: "solid",
     borderColor: "blue",
     borderWidth: 1,
-    paddingTop: 12,
+    // paddingTop: 12,
     marginTop: 12,
+    // textAlign: 'center'
+    flexDirection: 'row',
+  alignItems: 'center',
+  },
+
+  facebookImage: {
+    height: 36,
+    width: 36,
+    resizeMode: 'contain',
+    paddingTop: 4,
+    paddingRight: 15,
+    paddingBottom: 4, 
+    paddingLeft: 5,     
   },
 
   signUpText: {

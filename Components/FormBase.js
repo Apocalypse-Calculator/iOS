@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View, TextInput } from "react-native";
+import { StyleSheet, View, TextInput, Text } from "react-native";
 import { theme } from "../styles/theme";
 import { Formik } from 'formik';
 
@@ -24,8 +24,11 @@ export default function FormBase() {
                         onChangeText={props.handleChange('quantityOnHand')}
                         value={props.values.quantityOnHand}
                         />  
+                        <Text style={styles.number}>3.</Text>
+                        <Text style={styles.questionText}>Days until end of quarantine?</Text>
+                        <Text style={styles.approxText}>(approx)</Text>
 
-                         <TextInput
+                        <TextInput
                         style={styles.textInput}
                         placeholder='Number'
                         onChangeText={props.handleChange('daysUntilEnd')}
@@ -46,5 +49,21 @@ const styles = StyleSheet.create({
         borderStyle: "solid",
         borderColor: theme.colors.grey,
         borderRadius: 4,
+    },
+
+    questionText: {
+        color: theme.colors.charcoal,
+        fontSize: 16,
+        letterSpacing: 1,
+    },
+
+    approxText: {
+        color: theme.colors.grey,
+        fontSize: 14,
+    },
+
+    number: {
+        fontWeight: 'bold',
     }
+
 })
