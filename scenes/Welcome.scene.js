@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
 
   image: {
     height: 77,
-    width: 97,
+    width: 55,
     resizeMode: 'contain',
     marginBottom: 24, 
     marginTop: 37,
