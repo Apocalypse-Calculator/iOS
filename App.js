@@ -6,13 +6,14 @@ import Welcome from './scenes/Welcome.scene';
 import Pick from './scenes/Pick.scene';
 import Request from './scenes/Request.scene';
 import ToiletPaper from './scenes/ToiletPaper.scene';
+
 const Stack = createStackNavigator();
 
 function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Welcome">
-        <Stack.Screen name="Welcome" component={Welcome} />
+        <Stack.Screen name="Welcome" component={Welcome} options={{headerShown: false}} />
         <Stack.Screen name="Pick" component={Pick} />
         <Stack.Screen name="Request" component={Request} />
         <Stack.Screen name="ToiletPaper" component={ToiletPaper} />
