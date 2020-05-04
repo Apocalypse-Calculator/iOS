@@ -14,9 +14,9 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Welcome">
         <Stack.Screen name="Welcome" component={Welcome} options={{headerShown: false}} />
-        <Stack.Screen name="Pick" component={Pick} />
+        <Stack.Screen name="Pick" component={Pick} options={{headerTitle: "Pick a Category"}}/>
         <Stack.Screen name="Request" component={Request} />
-        <Stack.Screen name="ToiletPaper" component={ToiletPaper} />
+        <Stack.Screen name="ToiletPaper" component={ToiletPaper} options={{headerTitle: "Toilet Paper", headerBackTitle: "Categories"}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
