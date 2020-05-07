@@ -29,16 +29,15 @@ function Pick({ navigation }) {
           Pick a category to calculate your needs
         </Text>
 
-        <Button color='purple' text='Toilet Paper'
+        <Button color='purple' text='Toilet Paper' icon={require("../Components/Images/TP_Icon.png")}
         onPress={() => navigation.navigate("ToiletPaper")}
         />
 
         <Button style={{marginVertical: 24}} 
-        color='orange' text='Hand Sanitizer'
-          
+        color='orange' text='Hand Sanitizer' icon={require("../Components/Images/Sani_icon.png")}
         />
 
-        <Button color='lightBlue' text='Water Bottles'/>
+        <Button color='lightBlue' text='Water Bottles' icon={require("../Components/Images/Bottle_Icon.png")}/>
 
         <PickRequestMoreItems />
         </View>

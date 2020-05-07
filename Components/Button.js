@@ -1,9 +1,15 @@
 import React from "react";
-import { StyleSheet, Text, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, Image } from "react-native";
 import { theme } from "../styles/theme";
 
 export default Button = ({ style, onPress, color, text, icon }) => {
-  console.log(theme.colors[color])
+
+  function displayLogo() {
+    if (icon) {
+      return <Image source={icon}/>
+    }
+  }
+
   return (
     <TouchableOpacity
       onPress={onPress}
@@ -15,7 +21,12 @@ export default Button = ({ style, onPress, color, text, icon }) => {
         },
       ]}
     >
+      {
+        displayLogo()
+      }
+      
       <Text style={styles.buttonText}>{text}</Text>
+      <Image source={require("./Images/Arrow.png")}/>
     </TouchableOpacity>
   );
 };
@@ -33,13 +44,15 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.27,
     shadowRadius: 4.65,
     elevation: 6,
+    flexDirection: "row",
+    alignItems: 'center',
+    justifyContent: 'space-around',
   },
 
   buttonText: {
     color: theme.colors.white,
     fontWeight: "bold",
     textAlign: "center",
-    paddingTop: 20,
     fontSize: 16,
   },
 
