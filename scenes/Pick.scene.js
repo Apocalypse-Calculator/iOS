@@ -92,11 +92,11 @@ const styles = StyleSheet.create({
   },
 
   dottedLine: {
-    color: theme.colors.grey,
-    borderStyle: "dotted",
+    marginTop: 32,
+    borderStyle: 'dotted',
     borderWidth: 1,
     borderRadius: 1,
-    marginTop: 32,
+    borderColor: theme.colors.grey,
   },
 
   bottomText: {
