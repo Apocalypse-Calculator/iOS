@@ -1,8 +1,9 @@
-import React from "react";
-import { View, StyleSheet, Text } from "react-native";
-import RequestForm from "../Components/RequestForm";
-import Button from "../Components/Button";
-import { theme } from "../styles/theme";
+import React from 'react';
+import { View, StyleSheet, Text } from 'react-native';
+import RequestForm from '../Components/RequestForm';
+import Button from '../Components/Button';
+import { theme } from '../styles/theme';
+import { DashedLine } from '../Components/parts';
 
 function Request({ navigation }) {
   return (
@@ -11,20 +12,23 @@ function Request({ navigation }) {
         <Text style={[styles.header, styles.margins]}>REQUEST AN ITEM</Text>
         <View style={styles.center}>
           <Text style={[styles.underHeader, styles.margins]}>
-            We'll like to know from you what item should we add next
+            We'd like to know from you what item should we add next
           </Text>
           <RequestForm />
-          <View style={styles.dottedLine}></View>
-          <Text style={styles.calculateMyNeedsText}>Calculate my needs for</Text>
 
-          <Button color="purple" text="Toilet Paper" />
+          <DashedLine />
+
+          <Text style={styles.calculateMyNeedsText}>
+            Calculate my needs for
+          </Text>
+
+          <Button color='purple' text='Toilet Paper' />
           <Button
             style={{ marginVertical: 24 }}
-            color="orange"
-            text="Hand Sanitizer"
+            color='orange'
+            text='Hand Sanitizer'
           />
-          <Button color="lightBlue" text="Water Bottles" />
-          
+          <Button color='lightBlue' text='Water Bottles' />
         </View>
       </View>
     </View>
@@ -34,11 +38,11 @@ function Request({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: '#fff',
   },
 
   center: {
-    alignItems: "center",
+    alignItems: 'center',
   },
 
   margins: {
@@ -48,7 +52,7 @@ const styles = StyleSheet.create({
 
   header: {
     color: theme.colors.grey,
-    fontWeight: "bold",
+    fontWeight: 'bold',
     fontSize: 18,
     height: 21,
     marginTop: 24,
@@ -62,12 +66,8 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
   },
 
-  dottedLine: {
+  dash: {
     color: theme.colors.grey,
-    borderStyle: "dashed",
-    borderWidth: 1,
-    borderRadius: 1,
-    marginTop: 23,
   },
 
   calculateMyNeedsText: {
