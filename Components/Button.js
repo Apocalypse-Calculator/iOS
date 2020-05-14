@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, TouchableOpacity, Image } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, Image, View } from "react-native";
 import { theme } from "../styles/theme";
 
 export default Button = ({ style, onPress, color, text, icon }) => {
@@ -21,12 +21,15 @@ export default Button = ({ style, onPress, color, text, icon }) => {
         },
       ]}
     >
-      {
-        displayLogo()
-      }
-      
-      <Text style={styles.buttonText}>{text}</Text>
-      <Image source={require("./Images/Arrow.png")}/>
+      <View style={styles.icon}>
+        {
+          displayLogo()
+        }
+      </View>
+      <View style={styles.buttonTextContainer}>
+        <Text style={styles.buttonText}>{text}</Text>
+        <Image source={require("./Images/Arrow.png")}/>
+      </View>
     </TouchableOpacity>
   );
 };
@@ -47,7 +50,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: 'center',
     justifyContent: 'space-around',
-    paddingHorizontal: 10,
+    paddingHorizontal: 22,
   },
 
   buttonText: {
@@ -71,4 +74,22 @@ const styles = StyleSheet.create({
   waterButton: {
     backgroundColor: theme.colors.lightBlue,
   },
+
+  icon: {
+    width: 32,
+    flexDirection: "row",
+    justifyContent: "center",
+    // borderWidth: 1,
+
+  },
+
+  buttonTextContainer: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    justifyContent: "space-between",
+    marginLeft: 16,
+    // borderWidth: 1,
+  },
+
 });
