@@ -9,7 +9,9 @@ import { theme } from "../styles/theme";
 function Welcome({ navigation }) {
   return (
     <View style={styles.container}>
-      <Wave width={"100%"} />
+      <View style={{flexDirection: 'row'}}>
+        <Wave height={101} width={420} style={{flexGrow: 1,}} />
+      </View>
       <View style={{ alignItems: "center" }}>
         <Image
           style={styles.image}
@@ -27,11 +29,12 @@ function Welcome({ navigation }) {
 
 const styles = StyleSheet.create({
   container: {
+    flexDirection: 'column',
     flex: 1,
     backgroundColor: "#fff",
     padding: 0,
     alignItems: 'center',
-    justifyContent: 'flex-start'
+    justifyContent: 'flex-start',
   },
 
   header: {
@@ -56,6 +59,7 @@ const styles = StyleSheet.create({
     marginBottom: 24, 
     marginTop: 37,
   },
+
 });
 
 export default Welcome;

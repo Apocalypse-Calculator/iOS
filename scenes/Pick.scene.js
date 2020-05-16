@@ -3,6 +3,7 @@ import { View, StyleSheet, Text, } from "react-native";
 import PickRequestMoreItems from "../Components/PickRequestMoreItems";
 import Button from "../Components/Button";
 import { theme } from "../styles/theme";
+import { DashedLine } from '../Components/parts';
 // import { useNavigation } from "@react-navigation/native";
 
 function Pick({ navigation }) {
@@ -23,7 +24,8 @@ function Pick({ navigation }) {
           Develop smart buying habits
         </Text>
 
-        <View style={styles.dottedLine}></View>
+        <DashedLine />
+
         <View style={styles.center}>
         <Text style={styles.bottomText}>
           Pick a category to calculate your needs
