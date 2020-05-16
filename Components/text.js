@@ -97,20 +97,6 @@ export const ToiletPaperQuestionTwo = () => {
   );
 };
 
-export const ToiletPaperQuestionAnd = () => {
-  return (
-      <Text style={styles.inBetweenInputBoxes}>and</Text>
-  );
-};
-
-export const ToiletPaperQuestionPerSheet = () => {
-    return (
-      <>
-        <Text style={styles.inBetweenInputBoxes}>per sheet</Text>
-      </>
-    );
-  };
-
 export const ToiletPaperQuestionFour = () => {
   return (
     <>

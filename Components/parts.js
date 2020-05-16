@@ -14,5 +14,6 @@ export const DashedLine = ({ marginTop }) => {
 };
 
 export const Row = ({ children }) => {
-  return <View style={{ flexDirection: 'row', }}>{children}</View>;
+  return <View style={{ flexDirection: 'row', alignItems: 'center' }}>{children}</View>;
 };
+

@@ -53,7 +53,7 @@ export default ToiletPaper = (props) => {
               value={values.currentStock}
             />
 
-            <ToiletPaperQuestionAnd />
+            <Text style={styles.inBetweenInputBoxes}>and</Text>
 
             <TextInput
               style={styles.textBox}
@@ -63,7 +63,7 @@ export default ToiletPaper = (props) => {
               value={values.toiletPaperSheets}
             />
 
-            <ToiletPaperQuestionPerSheet />
+              <Text style={styles.inBetweenInputBoxes}>per roll</Text>
             </Row>
 
             <QuestionThree />
