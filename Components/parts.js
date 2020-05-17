@@ -17,3 +17,7 @@ export const Row = ({ children }) => {
   return <View style={{ flexDirection: 'row', alignItems: 'center' }}>{children}</View>;
 };
 
+export const InputGroup = ({ children }) => {
+  return <View style={{ flexDirection: 'row', marginBottom: 20}}>{children}</View>;
+};
+
