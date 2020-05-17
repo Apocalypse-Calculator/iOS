@@ -6,11 +6,17 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native';
-import { FindOutHowMuch, ToiletPaperText, QuestionOne, ToiletPaperQuestionTwo, ToiletPaperQuestionAnd, ToiletPaperQuestionPerSheet, QuestionThree, ToiletPaperQuestionFour } from '../Components/text';
+import {
+  FindOutHowMuch,
+  ToiletPaperText,
+  QuestionOne,
+  ToiletPaperQuestionTwo,
+  QuestionThree,
+  ToiletPaperQuestionFour,
+} from '../Components/text';
 import { DashedLine, Row } from '../Components/parts';
 import { Formik } from 'formik';
 import { theme } from '../styles/theme';
-
 
 export default ToiletPaper = (props) => {
   return (
@@ -19,21 +25,19 @@ export default ToiletPaper = (props) => {
       <FindOutHowMuch />
       <DashedLine />
       <Formik
-    initialValues=
-        {{
+        initialValues={{
           days: '',
           currentStock: '',
           toiletPaperSheets: '',
           householdNumber: '',
           timesUsedDaily: '',
-        }}        
+        }}
         onSubmit={console.log('hey')}
       >
         {({ handleChange, handleSubmit, values }) => (
           <View>
-
-          <QuestionOne />
-          <TextInput
+            <QuestionOne />
+            <TextInput
               style={styles.textBox}
               name='days'
               placeholder='Days'
@@ -41,27 +45,26 @@ export default ToiletPaper = (props) => {
               value={values.days}
             />
 
-
             <ToiletPaperQuestionTwo />
 
             <Row>
-            <TextInput
-              style={styles.textBox}
-              name='currentStock'
-              placeholder='Quantity'
-              onChangeText={handleChange('currentStock')}
-              value={values.currentStock}
-            />
+              <TextInput
+                style={styles.textBox}
+                name='currentStock'
+                placeholder='Quantity'
+                onChangeText={handleChange('currentStock')}
+                value={values.currentStock}
+              />
 
-            <Text style={styles.inBetweenInputBoxes}>and</Text>
+              <Text style={styles.inBetweenInputBoxes}>and</Text>
 
-            <TextInput
-              style={styles.textBox}
-              name='toiletPaperSheets'
-              placeholder='Sheets'
-              onChangeText={handleChange('toiletPaperSheets')}
-              value={values.toiletPaperSheets}
-            />
+              <TextInput
+                style={styles.textBox}
+                name='toiletPaperSheets'
+                placeholder='Sheets'
+                onChangeText={handleChange('toiletPaperSheets')}
+                value={values.toiletPaperSheets}
+              />
 
               <Text style={styles.inBetweenInputBoxes}>per roll</Text>
             </Row>
@@ -73,7 +76,7 @@ export default ToiletPaper = (props) => {
               placeholder='Quantity'
               onChangeText={handleChange('householdNumber')}
               value={values.householdNumber}
-            />     
+            />
 
             <ToiletPaperQuestionFour />
             <TextInput
@@ -82,15 +85,12 @@ export default ToiletPaper = (props) => {
               placeholder='Quantity'
               onChangeText={handleChange('timesUsedDaily')}
               value={values.timesUsedDaily}
-            /> 
-
+            />
 
             <View style={styles.center}>
-            <TouchableOpacity
-              style={[styles.center, styles.submitRequest]}
-            >
-              <Text style={styles.submitText}>Calculate now</Text>
-            </TouchableOpacity>
+              <TouchableOpacity style={[styles.center, styles.submitRequest]}>
+                <Text style={styles.submitText}>Calculate now</Text>
+              </TouchableOpacity>
             </View>
           </View>
         )}
@@ -102,7 +102,7 @@ export default ToiletPaper = (props) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: '#fff',
     display: 'flex',
     padding: 25,
   },

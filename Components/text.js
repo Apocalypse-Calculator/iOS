@@ -110,51 +110,6 @@ export const ToiletPaperQuestionFour = () => {
   );
 };
 
-export const CalcualatorBase = () => {
-  return (
-    <Formik>
-      initialValues=
-      {{
-        days: '',
-        currentStock: '',
-        householdNumber: '',
-        timesUsedDaily: '',
-      }}
-      {({ handleChange, handleSubmit, values }) => (
-        <View>
-          <TextInput
-            name='days'
-            placeholder='Days'
-            onChangeText={handleChange('days')}
-            value={values.days}
-          />
-
-          <TextInput
-            name='currentStock'
-            placeholder='Quantity'
-            onChangeText={handleChange('currentStock')}
-            value={values.currentStock}
-          />
-
-          <TextInput
-            name='householdNumber'
-            placeholder='Quantity'
-            onChangeText={handleChange('householdNumber')}
-            value={values.householdNumber}
-          />
-
-          <TextInput
-            name='timesUsedDaily'
-            placeholder='Quantity'
-            onChangeText={handleChange('timesUsedDaily')}
-            value={values.timesUsedDaily}
-          />
-        </View>
-      )}
-    </Formik>
-  );
-};
-
 const styles = StyleSheet.create({
   itemHeaderText: {
     fontSize: 18,
