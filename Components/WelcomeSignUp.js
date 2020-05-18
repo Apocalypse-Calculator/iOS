@@ -13,11 +13,11 @@ export default WelcomeSignUp = () => {
       </TouchableOpacity>
 
       <TouchableOpacity style={[styles.signUpBase, styles.facebookSignUp]}>
+        <Image 
+        source={require("./Images/f_logo.png")} 
+        style={styles.facebookImage}
+        />
         <Text style={[styles.signUpText, styles.facebookText]}>
-          <Image 
-          source={require("./Images/f_logo.png")} 
-          style={styles.facebookImage}
-          />
           Sign up with Facebook
         </Text>
         {/* onPress={() => navigate('HomeScreen')} */}
@@ -53,11 +53,9 @@ const styles = StyleSheet.create({
     borderStyle: "solid",
     borderColor: "blue",
     borderWidth: 1,
-    // paddingTop: 12,
     marginTop: 12,
-    // textAlign: 'center'
-    flexDirection: 'row',
-  alignItems: 'center',
+    flexDirection: "row",
+    alignItems: 'center',
   },
 
   facebookImage: {
@@ -83,9 +81,11 @@ const styles = StyleSheet.create({
   facebookText: {
     color: theme.colors.facebookBlue,
     fontSize: 14,
+    paddingLeft: 8,
   },
 
   center: {
-    alignItems: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
