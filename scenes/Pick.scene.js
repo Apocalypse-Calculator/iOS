@@ -3,6 +3,7 @@ import { View, StyleSheet, Text, } from "react-native";
 import PickRequestMoreItems from "../Components/PickRequestMoreItems";
 import Button from "../Components/Button";
 import { theme } from "../styles/theme";
+import { DashedLine } from '../Components/parts';
 // import { useNavigation } from "@react-navigation/native";
 
 function Pick({ navigation }) {
@@ -23,22 +24,22 @@ function Pick({ navigation }) {
           Develop smart buying habits
         </Text>
 
-        <View style={styles.dottedLine}></View>
+        <DashedLine />
+
         <View style={styles.center}>
         <Text style={styles.bottomText}>
           Pick a category to calculate your needs
         </Text>
 
-        <Button color='purple' text='Toilet Paper'
+        <Button color='purple' text='Toilet Paper' icon={require("../Components/Images/TP_Icon.png")}
         onPress={() => navigation.navigate("ToiletPaper")}
         />
 
         <Button style={{marginVertical: 24}} 
-        color='orange' text='Hand Sanitizer'
-          
+        color='orange' text='Hand Sanitizer' icon={require("../Components/Images/Sani_icon.png")}
         />
 
-        <Button color='lightBlue' text='Water Bottles'/>
+        <Button color='lightBlue' text='Water Bottles' icon={require("../Components/Images/Bottle_Icon.png")}/>
 
         <PickRequestMoreItems />
         </View>
@@ -93,11 +94,11 @@ const styles = StyleSheet.create({
   },
 
   dottedLine: {
-    color: theme.colors.grey,
-    borderStyle: "dotted",
+    marginTop: 32,
+    borderStyle: 'dotted',
     borderWidth: 1,
     borderRadius: 1,
-    marginTop: 32,
+    borderColor: theme.colors.grey,
   },
 
   bottomText: {
