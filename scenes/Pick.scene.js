@@ -32,7 +32,11 @@ function Pick({ navigation }) {
         </Text>
 
         <Button color='purple' text='Toilet Paper' icon={require("../Components/Images/TP_Icon.png")}
-        onPress={() => navigation.navigate("ToiletPaper")}
+        onPress={() => navigation.navigate("ToiletPaper", {
+          item: 'Toilet Paper',
+          itemColor: 'purple',
+          itemIcon: 'TP_Icon'
+        })}
         />
 
         <Button style={{marginVertical: 24}} 

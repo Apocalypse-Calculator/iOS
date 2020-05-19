@@ -5,7 +5,7 @@ import { Row } from './parts';
 
 export const ItemText = ({ itemColor, item }) => {
   return (
-    <Text style={{ color: itemColor, fontSize: 18, fontWeight: 'bold', marginBottom: 4 }}>
+    <Text style={{ color: theme.colors[itemColor], fontSize: 18, fontWeight: '500', marginBottom: 2 }}>
       {item.toUpperCase()}
     </Text>
   );
@@ -24,7 +24,7 @@ export const Num = ({ itemColor, num }) => {
     <Text style={{
       fontWeight: '600',
       fontSize: 18,
-      color: itemColor,
+      color: theme.colors[itemColor],
       width: '10%',
       // textAlign: 'center',
     }}>{num}</Text>
@@ -90,7 +90,7 @@ export const QuestionThree = () => {
 export const ToiletPaperQuestionTwo = () => {
   return (
     <>
-      <Text style={styles.questionText}>
+      <Text style={{fontSize: 16, marginBottom: 8,}}>
         Your current toilet paper roll count:
       </Text>
     </>
