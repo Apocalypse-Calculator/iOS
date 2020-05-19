@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { DashedLine } from '../Components/parts';
-import { Header, Q1, Q2, Q3, Q4, CalcBtn } from '../Components/CalculatorComponents';
+import { Header, Q1, Q2, Q3, Q4, CalcBtn } from '../Components/Calculator';
 import { Formik } from 'formik';
 
 export default ToiletPaper = ({ route }) => {
@@ -39,7 +39,7 @@ export default ToiletPaper = ({ route }) => {
 
             <Q3 itemColor={itemColor} onChangeText={handleChange('householdNumber')} value={values.householdNumber} />
 
-            <Q4 itemColor={itemColor} onChangeText={handleChange('timesUsedDaily')} value={values.timesUsedDaily} />
+            <Q4 item={item} itemColor={itemColor} onChangeText={handleChange('timesUsedDaily')} value={values.timesUsedDaily} />
 
             <CalcBtn itemColor={itemColor} onPress={handleSubmit} />
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   StyleSheet,
   Text,
@@ -7,17 +7,33 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
-import { FindOutHowMuch, ItemText, QuestionOne, ToiletPaperQuestionTwo, ToiletPaperQuestionAnd, ToiletPaperQuestionPerSheet, QuestionThree, ToiletPaperQuestionFour, Num } from './text';
-import { DashedLine, Row, InputGroup } from './parts';
-import { Formik } from 'formik';
-import { theme } from '../styles/theme';
-import icons from './Images';
+import { Row, InputGroup } from '../parts';
+import { FindOutHowMuch, ItemText, Num } from './text';
+import { TPQuestionFour, TPModal } from './TP_text';
+import { SaniQuestionFour, SaniModal } from './Sani_text';
+import { BottleQuestionFour, BottleModal } from './Bottle_text';
+import { theme } from '../../styles/theme';
+import icons from '../Images';
 
 // export const ItemText = ({  }) => {
 //   return (
     
 //   );
 // };
+
+const components = {
+  questionFour: {
+    ToiletPaper: TPQuestionFour,
+    HandSanitizer: SaniQuestionFour,
+    WaterBottles: BottleQuestionFour,
+  },
+  modal: {
+    ToiletPaper: TPModal,
+    HandSanitizer: SaniModal,
+    WaterBottles: BottleModal,
+  }
+
+}
 
 export const Header = ({ item, itemColor, itemIcon }) => {
   return (
@@ -36,7 +52,9 @@ export const Q1 = ({ itemColor, onChangeText, value }) => {
     <InputGroup>
       <Num itemColor={itemColor} num={ '1' } />
       <View style={{ flex: 1 }}>
-        <QuestionOne />
+        <Text style={{fontSize: 16, marginBottom: 8,}}>
+          Days until you can go shopping again:
+        </Text>
         <TextInput
           style={styles.textBox}
           name='days'
@@ -88,7 +106,9 @@ export const Q3 = ({ itemColor, onChangeText, value }) => {
     <InputGroup>
       <Num itemColor={itemColor} num={ '3' } />
       <View style={{ flex: 1 }}>
-        <QuestionThree />
+        <Text style={{fontSize: 16, marginBottom: 8,}}>
+          How many people use this item in your household?
+        </Text>
         <TextInput
           style={styles.textBox}
           name='householdNumber'
@@ -101,12 +121,13 @@ export const Q3 = ({ itemColor, onChangeText, value }) => {
   );
 };
 
-export const Q4 = ({ itemColor, onChangeText, value }) => {
+export const Q4 = ({ item, itemColor, onChangeText, value }) => {
+  const QuestionFour = components.questionFour[item.replace(/\s/g, '')]
   return (
     <InputGroup>
       <Num itemColor={itemColor} num={ '4' } />
       <View style={{ flex: 1 }}>
-        <ToiletPaperQuestionFour />
+        <QuestionFour />
         <TextInput
           style={styles.textBox}
           name='timesUsedDaily'
@@ -142,15 +163,12 @@ const styles = StyleSheet.create({
   },
 
   textBox: {
-    // marginTop: 8,
     height: 44,
     borderColor: theme.colors.grey,
     borderStyle: 'solid',
     borderWidth: 0.9,
     width: 80,
     borderRadius: 4,
-    // marginBottom: 20,
-    // marginLeft: 56,
     paddingLeft: 9,
   },
 
