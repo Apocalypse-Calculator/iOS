@@ -7,11 +7,11 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
-import { Row, InputGroup } from '../parts';
+import { InputGroup } from '../parts';
 import { FindOutHowMuch, ItemText, Num } from './text';
-import { TPQuestionFour, TPModal } from './TP_text';
-import { SaniQuestionFour, SaniModal } from './Sani_text';
-import { BottleQuestionFour, BottleModal } from './Bottle_text';
+import { TPQuestionTwo, TPQuestionFour, TPModal } from './TP_text';
+import { SaniQuestionTwo, SaniQuestionFour, SaniModal } from './Sani_text';
+import { BottleQuestionTwo, BottleQuestionFour, BottleModal } from './Bottle_text';
 import { theme } from '../../styles/theme';
 import icons from '../Images';
 
@@ -22,6 +22,11 @@ import icons from '../Images';
 // };
 
 const components = {
+  questionTwo: {
+    ToiletPaper: TPQuestionTwo,
+    HandSanitizer: SaniQuestionTwo,
+    WaterBottles: BottleQuestionTwo,
+  },
   questionFour: {
     ToiletPaper: TPQuestionFour,
     HandSanitizer: SaniQuestionFour,
@@ -68,36 +73,14 @@ export const Q1 = ({ itemColor, onChangeText, value }) => {
 };
 
 export const Q2 = ({ item, itemColor, onChangeText1, value1, onChangeText2, value2 }) => {
-  if (item === 'Toilet Paper') {
-    return (
-      <InputGroup>
-        <Num itemColor={itemColor} num={ '2' } />
-        <View style={{ flex: 1 }}>
-          <Text style={{fontSize: 16, marginBottom: 8,}}>
-            Your current toilet paper roll count:
-          </Text>
-          <Row>
-            <TextInput
-              style={styles.textBox}
-              name='currentStock'
-              placeholder='Quantity'
-              onChangeText={onChangeText1}
-              value={value1}
-            />
-            <Text style={styles.inBetweenInputBoxes}>and</Text>
-            <TextInput
-              style={styles.textBox}
-              name='toiletPaperSheets'
-              placeholder='Sheets'
-              onChangeText={onChangeText2}
-              value={value2}
-            />
-            <Text style={styles.inBetweenInputBoxes}>per roll</Text>
-          </Row>
-        </View>
-      </InputGroup>
-    );
-  }
+  const QuestionTwo = components.questionTwo[item.replace(/\s/g, '')];
+
+  return (
+    <InputGroup>
+      <Num itemColor={itemColor} num={ '2' } />
+      <QuestionTwo onChangeText1={onChangeText1} value1={value1} onChangeText2={onChangeText2} value2={value2} />
+    </InputGroup>
+  );
 };
 
 
@@ -199,9 +182,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 
-  inBetweenInputBoxes: {
-    fontSize: 12,
-    color: theme.colors.charcoal,
-    marginHorizontal: 8,
-  },
 });

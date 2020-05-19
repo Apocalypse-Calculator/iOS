@@ -41,9 +41,20 @@ function Pick({ navigation }) {
 
         <Button style={{marginVertical: 24}} 
         color='orange' text='Hand Sanitizer' icon={require("../Components/Images/Sani_icon.png")}
+        onPress={() => navigation.navigate("HandSanitizer", {
+          item: 'Hand Sanitizer',
+          itemColor: 'orange',
+          itemIcon: 'Sani_icon'
+        })}
         />
 
-        <Button color='lightBlue' text='Water Bottles' icon={require("../Components/Images/Bottle_Icon.png")}/>
+        <Button color='lightBlue' text='Water Bottles' icon={require("../Components/Images/Bottle_Icon.png")}
+        onPress={() => navigation.navigate("WaterBottles", {
+          item: 'Water Bottles',
+          itemColor: 'lightBlue',
+          itemIcon: 'Bottle_Icon'
+        })}
+        />
 
         <PickRequestMoreItems />
         </View>

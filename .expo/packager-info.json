@@ -1,1 +1,10 @@
-{}
+{
+  "expoServerPort": 19000,
+  "expoServerNgrokUrl": "https://6r-3ye.anonymous.ios.exp.direct",
+  "packagerNgrokUrl": "https://packager.6r-3ye.anonymous.ios.exp.direct",
+  "ngrokPid": 14602,
+  "packagerPort": 19004,
+  "packagerPid": 14567,
+  "webpackServerPort": null,
+  "devToolsPort": 19002
+}
