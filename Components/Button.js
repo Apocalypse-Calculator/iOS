@@ -1,14 +1,25 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, Image, View } from "react-native";
 import { theme } from "../styles/theme";
+import { TP, Sani, Bottle } from '../Components/Images';
 
-export default Button = ({ style, onPress, color, text, icon }) => {
+const components = {
+  icon: {
+    TP_Icon: TP,
+    Sani_icon: Sani,
+    Bottle_Icon: Bottle
+  },
+}
 
-  function displayLogo() {
-    if (icon) {
-      return <Image source={icon}/>
-    }
-  }
+export default Button = ({ style, onPress, itemColor, text, itemIcon }) => {
+
+  // function displayLogo() {
+  //   if (icon) {
+  //     return <Image source={icon}/>
+  //   }
+  // }
+
+  const Icon = components.icon[itemIcon];
 
   return (
     <TouchableOpacity
@@ -17,15 +28,20 @@ export default Button = ({ style, onPress, color, text, icon }) => {
         style,
         styles.button,
         {
-          backgroundColor: theme.colors[color],
+          backgroundColor: theme.colors[itemColor],
         },
       ]}
     >
-      <View style={styles.icon}>
+      {/* <View style={styles.icon}>
         {
           displayLogo()
         }
+      </View> */}
+      
+      <View style={{width: 40, height: 42, marginRight: 4, alignItems: 'center' }}>
+        <Icon width={40} height={42} fill={theme.colors.white} style={{ flexGrow: 1 }} />
       </View>
+
       <View style={styles.buttonTextContainer}>
         <Text style={styles.buttonText}>{text}</Text>
         <Image source={require("./Images/Arrow.png")}/>

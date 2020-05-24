@@ -1,12 +1,22 @@
-const images = {
-  TP_Icon: require('./TP_Icon.png'),
-  Sani_Icon: require('./Sani_icon.png'),
-  Bottle_Icon: require('./Bottle_Icon.png'),
-  colored: {
-    TP_Icon: require('./colored/TP_Icon.png'),
-    Sani_Icon: require('./colored/Sani_icon.png'),
-    Bottle_Icon: require('./colored/Bottle_Icon.png'),
-  }
-}
+import React from 'react';
+import TP_Icon from './svgs/TP_Icon.svg';
+import Sani_icon from './svgs/Sani_icon.svg';
+import Bottle_Icon from './svgs/Bottle_Icon.svg';
 
-export default images;
+export const TP = ({ height, width, fill }) => {
+  return (
+    <TP_Icon height={height} width={width} fill={fill} />
+  )
+};
+
+export const Sani = ({ height, width, fill }) => {
+  return (
+    <Sani_icon height={height} width={width} fill={fill} />
+  )
+};
+
+export const Bottle = ({ height, width, fill }) => {
+  return (
+    <Bottle_Icon height={height} width={width} fill={fill} />
+  )
+};

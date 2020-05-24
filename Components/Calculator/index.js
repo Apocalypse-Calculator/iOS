@@ -5,7 +5,6 @@ import {
   View,
   TextInput,
   TouchableOpacity,
-  Image,
 } from 'react-native';
 import { InputGroup } from '../parts';
 import { FindOutHowMuch, ItemText, Num } from './text';
@@ -13,7 +12,8 @@ import { TPQuestionTwo, TPQuestionFour, TPModal } from './TP_text';
 import { SaniQuestionTwo, SaniQuestionFour, SaniModal } from './Sani_text';
 import { BottleQuestionTwo, BottleQuestionFour, BottleModal } from './Bottle_text';
 import { theme } from '../../styles/theme';
-import icons from '../Images';
+import { TP, Sani, Bottle } from '../Images';
+
 
 // export const ItemText = ({  }) => {
 //   return (
@@ -36,14 +36,25 @@ const components = {
     ToiletPaper: TPModal,
     HandSanitizer: SaniModal,
     WaterBottles: BottleModal,
+  },
+  icon: {
+    TP_Icon: TP,
+    Sani_icon: Sani,
+    Bottle_Icon: Bottle
   }
 
 }
 
 export const Header = ({ item, itemColor, itemIcon }) => {
+  const Icon = components.icon[itemIcon];
   return (
     <View style={{ flexDirection: 'row', paddingHorizontal: 25, marginTop: 25}}>
-      <Image style={{width: 28, margin: 2, marginRight: 20}} source={icons.colored[itemIcon]} />
+      
+      <View style={{width: 40, height: 42, marginRight: 4, alignItems: 'center' }}>
+        <Icon width={40} height={42} fill={theme.colors[itemColor]} style={{ flexGrow: 1 }} />
+      </View>
+
+      {/* <Image style={{width: 28, margin: 2, marginRight: 20}} source={Icons.colored[itemIcon]} /> */}
       <View>
         <ItemText itemColor={itemColor} item={item} />
         <FindOutHowMuch />
