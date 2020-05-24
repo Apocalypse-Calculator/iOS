@@ -11,7 +11,7 @@ import { theme } from '../../styles/theme';
 
 const hintText = {
   ToiletPaper: 'The average person uses the restroom 7 times per day, however gender, age and pre-existing conditions can cause changes to your daily routine.',
-  HandSanitizer: "Daily hand sanitizer usage, if it's used place of washing your hands, can vary based on daily activities, such as cooking, sports, caring for a sick family member, etc. However 11 times per day is the recommended base.",
+  HandSanitizer: "Daily hand sanitizer usage, if it's used place of washing your hands, can vary based on daily activities, such as cooking, sports, caring for a sick family member, etc. However, 11 times per day is the recommended base.",
   WaterBottles: 'Health authorities suggest the average person drinks 64 oz (1.9L) of water per day. This is subject to change based on weight and similar variables.',
 }
 

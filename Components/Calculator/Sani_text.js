@@ -38,16 +38,6 @@ export const SaniQuestionFour = () => {
   );
 };
 
-export const SaniModal = () => {
-  return (
-    <Text>
-      Daily hand sanitizer usage, if it's used place of washing your hands, can
-      vary based on daily activities, such as cooking, sports, caring for a sick
-      family member, etc. However 11 times per day is the recommended base.
-    </Text>
-  );
-};
-
 const styles = StyleSheet.create({
   questionText: {
     fontSize: 16,

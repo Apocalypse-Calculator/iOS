@@ -9,6 +9,7 @@ export default HandSanitizer = ({ route }) => {
   //these variables are being passed in as props from the Pick scene
   const { item, itemColor, itemIcon } = route.params;
   const [modalVisible, setModalVisible] = useState(false);
+
   return (
     <View style={styles.container}>
 

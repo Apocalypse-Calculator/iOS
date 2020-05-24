@@ -39,15 +39,6 @@ export const TPQuestionFour = () => {
   );
 };
 
-export const TPModal = () => {
-  return (
-    <Text>
-      The average person uses the restroom 7 times per day, however gender, age
-      and pre-existing conditions can cause changes to your daily routine.
-    </Text>
-  );
-};
-
 const styles = StyleSheet.create({
   questionText: {
     fontSize: 16,

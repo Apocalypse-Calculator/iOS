@@ -8,9 +8,9 @@ import {
 } from 'react-native';
 import { InputGroup } from '../parts';
 import { FindOutHowMuch, ItemText, Num } from './text';
-import { TPQuestionTwo, TPQuestionFour, TPModal } from './TP_text';
-import { SaniQuestionTwo, SaniQuestionFour, SaniModal } from './Sani_text';
-import { BottleQuestionTwo, BottleQuestionFour, BottleModal } from './Bottle_text';
+import { TPQuestionTwo, TPQuestionFour } from './TP_text';
+import { SaniQuestionTwo, SaniQuestionFour } from './Sani_text';
+import { BottleQuestionTwo, BottleQuestionFour } from './Bottle_text';
 import HintModal from './HintModal';
 import { theme } from '../../styles/theme';
 import { TP, Sani, Bottle, QuestionMrk } from '../Images';
@@ -32,11 +32,6 @@ const components = {
     ToiletPaper: TPQuestionFour,
     HandSanitizer: SaniQuestionFour,
     WaterBottles: BottleQuestionFour,
-  },
-  modal: {
-    ToiletPaper: TPModal,
-    HandSanitizer: SaniModal,
-    WaterBottles: BottleModal,
   },
   icon: {
     TP_Icon: TP,
