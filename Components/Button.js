@@ -6,18 +6,12 @@ import { TP, Sani, Bottle } from '../Components/Images';
 const components = {
   icon: {
     TP_Icon: TP,
-    Sani_icon: Sani,
+    Sani_Icon: Sani,
     Bottle_Icon: Bottle
   },
 }
 
 export default Button = ({ style, onPress, itemColor, text, itemIcon }) => {
-
-  // function displayLogo() {
-  //   if (icon) {
-  //     return <Image source={icon}/>
-  //   }
-  // }
 
   const Icon = components.icon[itemIcon];
 
@@ -32,11 +26,6 @@ export default Button = ({ style, onPress, itemColor, text, itemIcon }) => {
         },
       ]}
     >
-      {/* <View style={styles.icon}>
-        {
-          displayLogo()
-        }
-      </View> */}
       
       <View style={{width: 40, height: 42, marginRight: 4, alignItems: 'center' }}>
         <Icon width={40} height={42} fill={theme.colors.white} style={{ flexGrow: 1 }} />
@@ -89,14 +78,6 @@ const styles = StyleSheet.create({
 
   waterButton: {
     backgroundColor: theme.colors.lightBlue,
-  },
-
-  icon: {
-    width: 32,
-    flexDirection: "row",
-    justifyContent: "center",
-    // borderWidth: 1,
-
   },
 
   buttonTextContainer: {

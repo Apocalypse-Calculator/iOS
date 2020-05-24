@@ -39,7 +39,7 @@ const components = {
   },
   icon: {
     TP_Icon: TP,
-    Sani_icon: Sani,
+    Sani_Icon: Sani,
     Bottle_Icon: Bottle
   }
 

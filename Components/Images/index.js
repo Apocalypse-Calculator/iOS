@@ -1,6 +1,6 @@
 import React from 'react';
 import TP_Icon from './svgs/TP_Icon.svg';
-import Sani_icon from './svgs/Sani_icon.svg';
+import Sani_Icon from './svgs/Sani_Icon.svg';
 import Bottle_Icon from './svgs/Bottle_Icon.svg';
 
 export const TP = ({ height, width, fill }) => {
@@ -11,7 +11,7 @@ export const TP = ({ height, width, fill }) => {
 
 export const Sani = ({ height, width, fill }) => {
   return (
-    <Sani_icon height={height} width={width} fill={fill} />
+    <Sani_Icon height={height} width={width} fill={fill} />
   )
 };
 

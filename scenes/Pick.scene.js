@@ -40,11 +40,11 @@ function Pick({ navigation }) {
         />
 
         <Button style={{marginVertical: 24}} 
-        itemColor='orange' text='Hand Sanitizer' itemIcon={'Sani_icon'}
+        itemColor='orange' text='Hand Sanitizer' itemIcon={'Sani_Icon'}
         onPress={() => navigation.navigate("HandSanitizer", {
           item: 'Hand Sanitizer',
           itemColor: 'orange',
-          itemIcon: 'Sani_icon'
+          itemIcon: 'Sani_Icon'
         })}
         />
 
