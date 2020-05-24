@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   StyleSheet,
   Text,
@@ -11,8 +11,9 @@ import { FindOutHowMuch, ItemText, Num } from './text';
 import { TPQuestionTwo, TPQuestionFour, TPModal } from './TP_text';
 import { SaniQuestionTwo, SaniQuestionFour, SaniModal } from './Sani_text';
 import { BottleQuestionTwo, BottleQuestionFour, BottleModal } from './Bottle_text';
+import HintModal from './HintModal';
 import { theme } from '../../styles/theme';
-import { TP, Sani, Bottle } from '../Images';
+import { TP, Sani, Bottle, QuestionMrk } from '../Images';
 
 
 // export const ItemText = ({  }) => {
@@ -115,20 +116,28 @@ export const Q3 = ({ itemColor, onChangeText, value }) => {
   );
 };
 
-export const Q4 = ({ item, itemColor, onChangeText, value }) => {
+export const Q4 = ({ item, itemColor, onChangeText, value, setModalVisible }) => {
   const QuestionFour = components.questionFour[item.replace(/\s/g, '')]
   return (
     <InputGroup>
       <Num itemColor={itemColor} num={ '4' } />
       <View style={{ flex: 1 }}>
         <QuestionFour />
-        <TextInput
-          style={styles.textBox}
-          name='timesUsedDaily'
-          placeholder='Quantity'
-          onChangeText={onChangeText}
-          value={value}
-        /> 
+        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+          <TextInput
+            style={[styles.textBox, { marginRight: 13 } ]}
+            name='timesUsedDaily'
+            placeholder='Quantity'
+            onChangeText={onChangeText}
+            value={value}
+          />
+          <TouchableOpacity onPress={() => {
+            setModalVisible(true)
+            // console.log('modal popup here')
+          }} >
+            <QuestionMrk height={20} width={20} stroke={theme.colors[itemColor]} fill={'none'} />
+          </TouchableOpacity>
+        </View>
       </View>
     </InputGroup>
   );
@@ -144,7 +153,11 @@ export const CalcBtn = ({ itemColor, onPress }) => {
   );
 };
   
-
+export const Modal = ({ modalVisible, setModalVisible, item, itemColor }) => {
+  return (
+    <HintModal modalVisible={modalVisible} setModalVisible={setModalVisible} item={item} itemColor={itemColor} />
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
