@@ -16,7 +16,7 @@ function Request({ navigation }) {
           </Text>
           <RequestForm />
 
-          <DashedLine />
+          <DashedLine style={{marginTop: 22, marginBottom: 10}}/>
 
           <Text style={styles.calculateMyNeedsText}>
             Calculate my needs for
@@ -25,7 +25,7 @@ function Request({ navigation }) {
           <Button color='purple' text='Toilet Paper' />
           <Button
             style={{ marginVertical: 24 }}
-            color='orange'
+            itemColor='orange'
             text='Hand Sanitizer'
           />
           <Button color='lightBlue' text='Water Bottles' />
