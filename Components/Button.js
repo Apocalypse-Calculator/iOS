@@ -13,7 +13,12 @@ const components = {
 
 export default Button = ({ style, onPress, itemColor, text, itemIcon }) => {
 
-  const Icon = components.icon[itemIcon];
+  function displayLogo() {
+    const Icon = components.icon[itemIcon];
+    if (itemIcon) {
+        return <Icon width={40} height={42} fill={theme.colors.white} style={{ flexGrow: 1 }} />
+    }
+  }
 
   return (
     <TouchableOpacity
@@ -28,7 +33,9 @@ export default Button = ({ style, onPress, itemColor, text, itemIcon }) => {
     >
       
       <View style={{width: 40, height: 42, marginRight: 4, alignItems: 'center' }}>
-        <Icon width={40} height={42} fill={theme.colors.white} style={{ flexGrow: 1 }} />
+        {
+          displayLogo()
+        }
       </View>
 
       <View style={styles.buttonTextContainer}>
