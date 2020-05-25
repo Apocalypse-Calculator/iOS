@@ -32,7 +32,7 @@ export default ToiletPaper = ({ route }) => {
             onSubmit={values => console.log(values)}
           >
             {({ handleChange, handleSubmit, values }) => (
-              <KeyboardAwareScrollView style={{ paddingHorizontal: 25 }}>
+              <KeyboardAwareScrollView style={{ paddingHorizontal: 25 }}  >
   
                 <Q1 
                   itemColor={itemColor} 

@@ -36,7 +36,7 @@ export default WaterBottle = ({ route }) => {
             onSubmit={values => console.log(values)}
           >
             {({ handleChange, handleSubmit, values }) => (
-              <KeyboardAwareScrollView style={{ marginTop: 12, paddingHorizontal: 25 }}>
+              <KeyboardAwareScrollView style={{ paddingHorizontal: 25 }}>
     
                 <Q1 
                   itemColor={itemColor} 

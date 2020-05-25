@@ -140,7 +140,7 @@ export const Q4 = ({ item, itemColor, onChangeText, value, setModalVisible }) =>
             onChangeText={onChangeText}
             value={value}
             keyboardType='numeric'
-            autoFocus={true}
+            // autoFocus={true}
           />
           <TouchableOpacity onPress={() => {
             setModalVisible(true)

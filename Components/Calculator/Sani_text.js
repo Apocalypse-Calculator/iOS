@@ -48,8 +48,8 @@ export const SaniQuestionTwo = ({ itemColor, onChangeText1, value1, onChangeText
           renderInActiveText={!switchEnabled}
           backgroundActive={theme.colors[itemColor]}
           backgroundInactive={theme.colors[itemColor]}
-          switchLeftPx={3}
-          switchRightPx={3}
+          switchLeftPx={2.5}
+          switchRightPx={2.5}
           switchBorderRadius={4}
         />
       </Row>
