@@ -1,6 +1,6 @@
 import React from 'react';
 import TP_Icon from './svgs/TP_Icon.svg';
-import Sani_Icon from './svgs/Sani_Icon.svg';
+import Sani_Icon from './svgs/Sani_icon.svg';
 import Bottle_Icon from './svgs/Bottle_Icon.svg';
 import QuestionMark from './svgs/QuestionMark.svg';
 
