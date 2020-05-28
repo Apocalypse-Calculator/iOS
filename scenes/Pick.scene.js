@@ -31,15 +31,30 @@ function Pick({ navigation }) {
           Pick a category to calculate your needs
         </Text>
 
-        <Button color='purple' text='Toilet Paper' icon={require("../Components/Images/TP_Icon.png")}
-        onPress={() => navigation.navigate("ToiletPaper")}
+        <Button itemColor='purple' text='Toilet Paper' itemIcon={'TP_Icon'}
+        onPress={() => navigation.navigate("ToiletPaper", {
+          item: 'Toilet Paper',
+          itemColor: 'purple',
+          itemIcon: 'TP_Icon'
+        })}
         />
 
         <Button style={{marginVertical: 24}} 
-        color='orange' text='Hand Sanitizer' icon={require("../Components/Images/Sani_icon.png")}
+        itemColor='orange' text='Hand Sanitizer' itemIcon={'Sani_Icon'}
+        onPress={() => navigation.navigate("HandSanitizer", {
+          item: 'Hand Sanitizer',
+          itemColor: 'orange',
+          itemIcon: 'Sani_Icon'
+        })}
         />
 
-        <Button color='lightBlue' text='Water Bottles' icon={require("../Components/Images/Bottle_Icon.png")}/>
+        <Button itemColor='lightBlue' text='Water Bottles' itemIcon={'Bottle_Icon'}
+        onPress={() => navigation.navigate("WaterBottles", {
+          item: 'Water Bottles',
+          itemColor: 'lightBlue',
+          itemIcon: 'Bottle_Icon'
+        })}
+        />
 
         <PickRequestMoreItems />
         </View>
