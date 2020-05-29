@@ -16,19 +16,35 @@ function Request({ navigation }) {
           </Text>
           <RequestForm />
 
-          <DashedLine />
+          <DashedLine style={{marginTop: 22, marginBottom: 10}}/>
 
           <Text style={styles.calculateMyNeedsText}>
             Calculate my needs for
           </Text>
 
-          <Button color='purple' text='Toilet Paper' />
-          <Button
-            style={{ marginVertical: 24 }}
-            color='orange'
-            text='Hand Sanitizer'
+          <Button itemColor='purple' text='Toilet Paper' itemIcon={'TP_Icon'}
+            onPress={() => navigation.navigate("ToiletPaper", {
+              item: 'Toilet Paper',
+              itemColor: 'purple',
+              itemIcon: 'TP_Icon'
+            })}
           />
-          <Button color='lightBlue' text='Water Bottles' />
+
+          <Button style={{marginVertical: 24}} itemColor='orange' text='Hand Sanitizer' itemIcon={'Sani_Icon'}
+            onPress={() => navigation.navigate("HandSanitizer", {
+              item: 'Hand Sanitizer',
+              itemColor: 'orange',
+              itemIcon: 'Sani_Icon'
+            })}
+          />
+
+          <Button itemColor='lightBlue' text='Water Bottles' itemIcon={'Bottle_Icon'}
+            onPress={() => navigation.navigate("WaterBottles", {
+              item: 'Water Bottles',
+              itemColor: 'lightBlue',
+              itemIcon: 'Bottle_Icon'
+            })}
+          />
         </View>
       </View>
     </View>

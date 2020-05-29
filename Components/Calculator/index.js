@@ -5,6 +5,8 @@ import {
   View,
   TextInput,
   TouchableOpacity,
+  TouchableWithoutFeedback,
+  Keyboard
 } from 'react-native';
 import { InputGroup } from '../parts';
 import { FindOutHowMuch, ItemText, Num } from './text';
@@ -41,6 +43,14 @@ const components = {
 
 }
 
+export const DismissKeyboard = ({children}) => {
+  return (
+    <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+      {children}
+    </TouchableWithoutFeedback>
+  )
+};
+
 export const Header = ({ item, itemColor, itemIcon }) => {
   const Icon = components.icon[itemIcon];
   return (
@@ -61,31 +71,34 @@ export const Header = ({ item, itemColor, itemIcon }) => {
 
 export const Q1 = ({ itemColor, onChangeText, value }) => {
   return (
-    <InputGroup>
-      <Num itemColor={itemColor} num={ '1' } />
-      <View style={{ flex: 1 }}>
-        <Text style={{fontSize: 16, marginBottom: 8,}}>
-          Days until you can go shopping again:
-        </Text>
-        <TextInput
-          style={styles.textBox}
-          name='days'
-          placeholder='Days'
-          onChangeText={onChangeText}
-          value={value}
-        />
-      </View>
-    </InputGroup>
+    <View style={{marginTop: 22}}>
+      <InputGroup >
+        <Num itemColor={itemColor} num={ '1' } />
+        <View style={{ flex: 1 }}>
+          <Text style={{fontSize: 16, marginBottom: 8,}}>
+            Days until you can go shopping again:
+          </Text>
+          <TextInput
+            style={styles.textBox}
+            name='days'
+            placeholder='Days'
+            onChangeText={onChangeText}
+            value={value}
+            keyboardType='numeric'
+          />
+        </View>
+      </InputGroup>
+    </View>
   );
 };
 
-export const Q2 = ({ item, itemColor, onChangeText1, value1, onChangeText2, value2 }) => {
+export const Q2 = ({ item, itemColor, onChangeText1, value1, onChangeText2, value2, switchEnabled, setSwitchEnabled }) => {
   const QuestionTwo = components.questionTwo[item.replace(/\s/g, '')];
 
   return (
     <InputGroup>
       <Num itemColor={itemColor} num={ '2' } />
-      <QuestionTwo onChangeText1={onChangeText1} value1={value1} onChangeText2={onChangeText2} value2={value2} />
+      <QuestionTwo itemColor={itemColor} onChangeText1={onChangeText1} value1={value1} onChangeText2={onChangeText2} value2={value2} switchEnabled={switchEnabled} setSwitchEnabled={setSwitchEnabled} />
     </InputGroup>
   );
 };
@@ -105,6 +118,7 @@ export const Q3 = ({ itemColor, onChangeText, value }) => {
           placeholder='Quantity'
           onChangeText={onChangeText}
           value={value}
+          keyboardType='numeric'
           />    
       </View>
     </InputGroup>
@@ -125,6 +139,8 @@ export const Q4 = ({ item, itemColor, onChangeText, value, setModalVisible }) =>
             placeholder='Quantity'
             onChangeText={onChangeText}
             value={value}
+            keyboardType='numeric'
+            // autoFocus={true}
           />
           <TouchableOpacity onPress={() => {
             setModalVisible(true)
@@ -189,6 +205,7 @@ const styles = StyleSheet.create({
     shadowRadius: 4.65,
     elevation: 6,
     marginTop: 20,
+    marginBottom: 20,
   },
 
   submitText: {

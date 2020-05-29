@@ -16,6 +16,7 @@ export const TPQuestionTwo = ({onChangeText1, value1, onChangeText2, value2}) =>
           placeholder='Quantity'
           onChangeText={onChangeText1}
           value={value1}
+          keyboardType='numeric'
         />
         <Text style={styles.inBetweenInputBoxes}>and</Text>
         <TextInput
@@ -24,6 +25,7 @@ export const TPQuestionTwo = ({onChangeText1, value1, onChangeText2, value2}) =>
           placeholder='Sheets'
           onChangeText={onChangeText2}
           value={value2}
+          keyboardType='numeric'
         />
         <Text style={styles.inBetweenInputBoxes}>per roll</Text>
       </Row>

@@ -8,7 +8,7 @@ export const DashedLine = ({ marginTop }) => {
     <Dash
       dashGap={3}
       dashColor={theme.colors.lineGrey}
-      style={{ marginTop: 22, marginBottom: 10, width: 500 }}
+      style={{ marginTop: 22, width: 500 }}
     />
   );
 };

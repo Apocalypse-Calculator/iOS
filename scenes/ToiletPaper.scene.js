@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, ScrollView } from 'react-native';
 import { DashedLine } from '../Components/parts';
-import { Header, Q1, Q2, Q3, Q4, CalcBtn, Modal } from '../Components/Calculator';
+import { Header, Q1, Q2, Q3, Q4, CalcBtn, Modal, DismissKeyboard } from '../Components/Calculator';
 import { Formik } from 'formik';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 export default ToiletPaper = ({ route }) => {
 
@@ -10,45 +11,50 @@ export default ToiletPaper = ({ route }) => {
   const { item, itemColor, itemIcon } = route.params;
   const [modalVisible, setModalVisible] = useState(false);
   return (
-    <View style={styles.container}>
+    <DismissKeyboard>
+      <View style={styles.container}>
 
-      <View><Modal modalVisible={modalVisible} setModalVisible={setModalVisible} item={item} itemColor={itemColor} /></View>
+        <View><Modal modalVisible={modalVisible} setModalVisible={setModalVisible} item={item} itemColor={itemColor} /></View>
 
-      <Header item={item} itemColor={itemColor} itemIcon={itemIcon} />
+        <Header item={item} itemColor={itemColor} itemIcon={itemIcon} />
 
-      <DashedLine />
+        <DashedLine style={{marginTop: 22}} />
 
-      <Formik
-        initialValues= {{
-          days: '',
-          currentStock: '',
-          toiletPaperSheets: '',
-          householdNumber: '',
-          timesUsedDaily: '',
-        }}        
-        onSubmit={values => console.log(values)}
-      >
-        {({ handleChange, handleSubmit, values }) => (
-          <View style={{ marginTop: 12, paddingHorizontal: 25 }}>
-
-            <Q1 
-              itemColor={itemColor} 
-              onChangeText={handleChange('days')} 
-              value={values.days}
-            />
-
-            <Q2 item={item} itemColor={itemColor} onChangeText1={handleChange('currentStock')} value1={values.currentStock} onChangeText2={handleChange('toiletPaperSheets')} value2={values.toiletPaperSheets} />
-
-            <Q3 itemColor={itemColor} onChangeText={handleChange('householdNumber')} value={values.householdNumber} />
-
-            <Q4 item={item} itemColor={itemColor} onChangeText={handleChange('timesUsedDaily')} value={values.timesUsedDaily} modalVisible={modalVisible} setModalVisible={setModalVisible} />
-
-            <CalcBtn itemColor={itemColor} onPress={handleSubmit} />
-
-          </View>
-        )}
-      </Formik>
-    </View>
+        <ScrollView>
+          <Formik
+            initialValues= {{
+              days: '',
+              currentStock: '',
+              toiletPaperSheets: '',
+              householdNumber: '',
+              timesUsedDaily: '',
+            }}        
+            onSubmit={values => console.log(values)}
+          >
+            {({ handleChange, handleSubmit, values }) => (
+              <KeyboardAwareScrollView style={{ paddingHorizontal: 25 }}  >
+  
+                <Q1 
+                  itemColor={itemColor} 
+                  onChangeText={handleChange('days')} 
+                  value={values.days}
+                />
+  
+                <Q2 item={item} itemColor={itemColor} onChangeText1={handleChange('currentStock')} value1={values.currentStock} onChangeText2={handleChange('toiletPaperSheets')} value2={values.toiletPaperSheets} />
+  
+                <Q3 itemColor={itemColor} onChangeText={handleChange('householdNumber')} value={values.householdNumber} />
+  
+                <Q4 item={item} itemColor={itemColor} onChangeText={handleChange('timesUsedDaily')} value={values.timesUsedDaily} modalVisible={modalVisible} setModalVisible={setModalVisible} />
+  
+                <CalcBtn itemColor={itemColor} onPress={handleSubmit} />
+                <View style={{ height: 60 }} />
+  
+              </KeyboardAwareScrollView>
+            )}
+          </Formik>
+        </ScrollView>
+      </View>
+    </DismissKeyboard>
   );
 };
 
